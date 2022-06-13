@@ -27,6 +27,8 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 gem 'bootstrap', '~> 5.1.3'
+gem 'simple_form', github: 'heartcombo/simple_form'
+
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
@@ -75,3 +77,5 @@ end
 gem "devise", "~> 4.8"
 
 gem "dartsass-rails", "~> 0.3.0"
+
+gem 'swiper-rails'

@@ -1,9 +1,19 @@
-// Sassy
+// External Libraries
 @import 'bootstrap';
 
+
+// Graphical variables
+@import 'config/fonts';
+@import 'config/colors';
+@import 'config/bootstrap_variables';
+
+// Your CSS partials
+@import 'components/index';
+@import 'pages/index';
+@import 'events/index';
 
 $primary: blue;
 
 h1 {
-  color: $primary;
+  color: $green;
 }

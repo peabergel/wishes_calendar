@@ -1,0 +1,38 @@
+.banner {
+  height: 550px;
+  width: 100%;
+  padding: 48px 200px;
+  background-color: rgb(218, 218, 218);
+}
+
+.banner-container {
+  height: 100%;
+  width: 100%;
+}
+
+.poster-movie {
+  object-fit: cover;
+  background-position: center;
+  height: 100%;
+  width: 25%;
+}
+
+.description-movie {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 75%;
+  padding: 6px 42px;
+}
+
+.title-movie {
+  font-weight: bold;
+}
+
+.year-movie {
+  font-weight: light;
+}
+
+#btn-disabled {
+  width: 30%;
+}

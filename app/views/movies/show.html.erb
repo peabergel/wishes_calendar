@@ -1,0 +1,26 @@
+<div class="banner">
+  <div class="banner-container  d-flex  ">
+    <%= image_tag @movie.poster_path, class:'poster-movie' %>
+
+    <div class="description-movie">
+      <h2><span class="title-movie"><%= @movie.title %></span><span class="year-movie"> (<%= @movie.release_date.year %>)</span></h2>
+      <p><%= @movie.release_date %></p>
+      <h4>Synopsis</h4>
+      <p><%= @movie.synopsis %></p>
+      <h4>Director</h4>
+      <p><%= @movie.director %></p>
+      <h4>Genre(s)</h4>
+      <p><%= "#{@genres.join(", ")}" %></p>
+      <% if @events_movies.include?(@movie) %>
+        <button class="btn btn-danger disabled" id="btn-disabled">Already in your calendar</button>
+      <% else %>
+        <%= form_with url: "/events", method: :post do |f| %>
+          <%= f.hidden_field :movie_id, value: @movie.id %>
+          <%= f.submit "Add to my Calendar", class:'btn btn-danger' %>
+        <% end %>
+      <% end %>
+    </div>        
+  </div>
+ 
+</div>
+

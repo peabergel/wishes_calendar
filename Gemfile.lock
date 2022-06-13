@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/heartcombo/simple_form.git
+  revision: 23205201a935c7e52c39549756e2ec2e2ec47793
+  specs:
+    simple_form (5.1.0)
+      actionpack (>= 5.2)
+      activemodel (>= 5.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -215,6 +223,8 @@ GEM
     stimulus-rails (1.0.4)
       railties (>= 6.0.0)
     strscan (3.0.3)
+    swiper-rails (1.0.4)
+      rails (>= 3.1)
     thor (1.2.1)
     tilt (2.0.10)
     timeout (0.3.0)
@@ -259,8 +269,10 @@ DEPENDENCIES
   puma (~> 5.0)
   rails (~> 7.0.3)
   selenium-webdriver
+  simple_form!
   sprockets-rails
   stimulus-rails
+  swiper-rails
   turbo-rails
   tzinfo-data
   web-console
