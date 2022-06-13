@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>My events</h1>
+  <h4>My movies releases</h4>
+  <br>
+  <div class="movies-releases">
+    <% @events_dates.each do |date| %>
+      <% events = @events.where(release_date: date) %>
+      <p class="event-date"><%= date %></p>
+      <div class="d-flex pb-5">
+        <% events.each do |event| %>
+          <div class="cards d-flex pe-2">
+            <%= image_tag event.movie.poster_path, class:'card-category' %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

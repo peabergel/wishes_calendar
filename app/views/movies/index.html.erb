@@ -1,0 +1,33 @@
+<div class="container" data-controller="popover">
+  <div class="cards">
+    <% @movies.each do |movie| %>
+      <div class="card">
+        <%= link_to movie_path(movie) do %>
+          <%= image_tag movie.poster_path, class: 'card-category' %>
+        <% end %>
+        <div class="movie-title text-center">
+          <div class="info-movie">
+            <p><%= movie.title %></p>
+            <p><%= movie.release_date %></p>
+          </div>
+          
+            <%= form_with url: "/events", method: :post, class: 'form-movie' do |f| %>
+              <%= f.hidden_field :movie_id, value: movie.id %>
+              <% if @events_movies.include?(movie) %>
+                <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Already in your Calendar">
+                  <%= f.button '<i class="fa-solid fa-plus disabled"></i>'.html_safe, class: "button my-button", disabled: true %>
+                </span>
+              <% else %>
+                <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Add to Calendar">
+                  <%= f.button '<i class="fa-solid fa-plus"></i>'.html_safe, class: "button my-button" %>
+                </span>
+              <% end %>
+            <% end %>
+        </div> 
+
+      </div>
+    <% end %>
+  </div>
+</div>
+
+

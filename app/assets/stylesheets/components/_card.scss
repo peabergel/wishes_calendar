@@ -1,0 +1,59 @@
+.card-category {
+  object-fit: cover;
+  height: 300px;
+  width: 200px;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  &:before {
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .4);
+    border-radius: 5px;
+    position: absolute;
+    opacity: 0;
+    transition: opacity .2s ease;
+  }
+  &:hover {
+    &:before {
+      opacity: 1;
+    }
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+  p {
+    text-decoration: none;
+    margin-bottom: 8px;
+    color: black;
+  }
+}
+
+.movie-title {
+  display: inline;
+  font-size: 12px;
+}
+
+.my-button {
+  all: unset;
+}
+
+.form-movie {
+  position: absolute;
+  width: 10px;
+  left: 93%;
+  top: 95%;
+}
+
+.disabled {
+  color: lightgray;
+}
